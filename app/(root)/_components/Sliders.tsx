@@ -54,7 +54,7 @@ function Sliders() {
                     {slideMap.map(slide => (
                         <CarouselItem key={slide.id} >
                             <div className="relative w-full h-auto lg:h-72 aspect-21/9">
-                                <Image src={slide.src} fill alt={`Slide-${slide.id}`} className="object-cover rounded-2xl" />
+                                <Image src={slide.src} fill alt={`Slide-${slide.id}`} loading="eager" className="object-cover rounded-2xl" />
                             </div>
                         </CarouselItem>
                     ))}

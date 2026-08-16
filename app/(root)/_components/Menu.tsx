@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils"
 import { Discount01Icon, Fire03Icon, Info, PhoneCall, Question, Wallet02Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
+import Categories from "./Categories"
 
 const menus = [
     { id: 1, name: "پرسش‌های متداول", icon: Question, icon_color: "text-green-500" },
@@ -13,7 +14,8 @@ const menus = [
 function Menu() {
     return (
         <div className="hidden lg:flex items-center justify-between bg-foreground px-4 py-3 rounded-full">
-            <div className="text-white flex items-center gap-x-8">
+            <div className="text-white flex items-center gap-x-4">
+                <Categories />
                 {menus.map(menu => (
                     <div key={menu.id} className="flex items-center gap-x-2">
                         <HugeiconsIcon icon={menu.icon} className={cn("size-5", menu.icon_color)} />
