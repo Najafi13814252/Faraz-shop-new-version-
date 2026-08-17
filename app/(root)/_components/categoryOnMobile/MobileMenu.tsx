@@ -6,7 +6,7 @@ import categories from "@/data/categories"
 import BreadcrumbMenu from "./BreadcrumbMenu"
 import StepList from "./StepList"
 
-import { Sheet, SheetClose, SheetContent, SheetTitle } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { menus } from "../Menu"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowLeft, DashboardSquare01Icon } from "@hugeicons/core-free-icons"
@@ -14,13 +14,7 @@ import { ArrowLeft, DashboardSquare01Icon } from "@hugeicons/core-free-icons"
 // 0 = root, 1 = categories, 2 = filters, 3 = subFilters
 type Step = 0 | 1 | 2 | 3
 
-export default function MobileMenu({
-    open,
-    onClose,
-}: {
-    open: boolean
-    onClose: () => void
-}) {
+export default function MobileMenu() {
     const [step, setStep] = useState<Step>(0)
     const [categoryId, setCategoryId] = useState<number>()
     const [filterId, setFilterId] = useState<number>()
@@ -49,14 +43,19 @@ export default function MobileMenu({
     const handleOpenChange = (nextOpen: boolean) => {
         if (!nextOpen) {
             goRoot()
-            onClose()
         }
     }
 
     const isShowCategory = step > 0
 
     return (
-        <Sheet open={open} onOpenChange={handleOpenChange}>
+        <Sheet onOpenChange={handleOpenChange} >
+            <SheetTrigger render={
+                <div className="flex flex-col items-center gap-y-2 cursor-pointer">
+                    <HugeiconsIcon icon={DashboardSquare01Icon} className="size-5" />
+                    دسته‌بندی‌ها
+                </div>
+            } />
             <SheetContent
                 showCloseButton={false}
                 side="right"

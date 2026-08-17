@@ -1,20 +1,18 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { DashboardSquare01Icon, Home, Login, ShoppingBag03Icon } from "@hugeicons/core-free-icons"
+import { Home, Login, ShoppingBag03Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
 import MobileMenu from "./categoryOnMobile/MobileMenu"
 
 function MobileFooter() {
     const pathname = usePathname()
-    const [isOpen, setIsOpen] = useState(false)
 
     const isActive = pathname === '/'
     return (
         <>
-            <div className="lg:hidden sticky bottom-0 w-full z-50">
+            <div className="lg:hidden sticky bottom-4 w-full z-50">
                 <ul className="text-white bg-primary/95 px-4 py-2 shadow-lg rounded-2xl flex items-center justify-between">
                     <li className="flex flex-col items-center gap-y-2 cursor-pointer">
                         <HugeiconsIcon icon={Home} className={cn(
@@ -23,10 +21,7 @@ function MobileFooter() {
                         )} />
                         خانه
                     </li>
-                    <li className="flex flex-col items-center gap-y-2 cursor-pointer" onClick={() => setIsOpen(true)}>
-                        <HugeiconsIcon icon={DashboardSquare01Icon} className="size-5" />
-                        دسته‌بندی‌ها
-                    </li>
+                    <MobileMenu />
                     <li className="flex flex-col items-center gap-y-2 cursor-pointer">
                         <HugeiconsIcon icon={ShoppingBag03Icon} className="size-5" />
                         سبد خرید
@@ -37,10 +32,6 @@ function MobileFooter() {
                     </li>
                 </ul>
             </div>
-
-            {isOpen && (
-                <MobileMenu open={isOpen} onClose={() => setIsOpen(false)} />
-            )}
         </>
     )
 }
