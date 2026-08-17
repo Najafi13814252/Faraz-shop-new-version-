@@ -1,3 +1,4 @@
+import Footer from "./_components/Footer"
 import Navbar from "./_components/Navbar"
 
 function layout({ children }: LayoutProps<"/">) {
@@ -7,6 +8,7 @@ function layout({ children }: LayoutProps<"/">) {
             <main className="py-4">
                 {children}
             </main>
+            <Footer />
         </div>
     )
 }

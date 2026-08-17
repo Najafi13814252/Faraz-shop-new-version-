@@ -1,10 +1,12 @@
 import CardSlider from "@/components/custom/CardSlider"
-import SectionHeader from "@/components/custom/SectionHeader"
+import { Discount01Icon } from "@hugeicons/core-free-icons"
+
+export type IconSvgObject = typeof Discount01Icon
 
 function SpecialSale() {
   return (
     <div>
-      <CardSlider />
+      <CardSlider icon={Discount01Icon} title="فروش ویژه" variant="special"/>
     </div>
   )
 }
