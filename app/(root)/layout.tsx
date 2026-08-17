@@ -1,4 +1,5 @@
 import Footer from "./_components/Footer"
+import MobileFooter from "./_components/MobileFooter"
 import Navbar from "./_components/Navbar"
 
 function layout({ children }: LayoutProps<"/">) {
@@ -9,6 +10,7 @@ function layout({ children }: LayoutProps<"/">) {
                 {children}
             </main>
             <Footer />
+            <MobileFooter />
         </div>
     )
 }

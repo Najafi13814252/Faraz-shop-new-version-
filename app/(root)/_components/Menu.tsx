@@ -3,7 +3,7 @@ import { Discount01Icon, Fire03Icon, Info, PhoneCall, Question, Wallet02Icon } f
 import { HugeiconsIcon } from "@hugeicons/react"
 import Categories from "./Categories"
 
-const menus = [
+export const menus = [
     { id: 1, name: "پرسش‌های متداول", icon: Question, icon_color: "text-green-500" },
     { id: 2, name: "درباره ما", icon: Info, icon_color: "text-blue-500" },
     { id: 3, name: "جشنواره تخفیف", icon: Discount01Icon, icon_color: "text-red-500" },
