@@ -7,9 +7,27 @@ datasource db {
   provider = "mysql"
 }
 
-
 model User {
-  id String @id @default(uuid())
+  id    String  @id @default(uuid())
   email String
-  name String?
+  name  String?
+}
+
+model Category {
+  id       String    @id @default(uuid())
+  name     String
+  products Product[]
+}
+
+model Product {
+  id       String @id @default(uuid())
+  imageUrl String @db.Text
+  name     String
+  price    Int    @default(0)
+  discount Int?   @default(0)
+
+  catrgory Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId String
+
+  createdAt DateTime @default(now())
 }

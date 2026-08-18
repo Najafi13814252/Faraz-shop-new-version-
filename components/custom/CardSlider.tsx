@@ -1,16 +1,18 @@
-import { products } from "@/data/products"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel"
 import SectionHeader from "./SectionHeader"
 import ProductCard from "./ProductCard"
 import { IconSvgObject } from "@/app/(root)/_components/SpecialSale"
+import { Product } from "@/lib/generated/prisma/client"
+
 
 interface CardSliderProps {
+    products: Product[]
     icon: IconSvgObject
     title: string
     variant?: 'default' | 'special'
 }
 
-function CardSlider({icon, title, variant}: CardSliderProps) {
+function CardSlider({icon, title, variant, products}: CardSliderProps) {
     return (
         <div>
             <SectionHeader icon={icon} title={title} variant={variant}>

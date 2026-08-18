@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `Product` MODIFY `price` INTEGER NOT NULL DEFAULT 0,
+    MODIFY `discount` INTEGER NULL DEFAULT 0;

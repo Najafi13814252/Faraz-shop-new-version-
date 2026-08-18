@@ -10,6 +10,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { menus } from "../Menu"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowLeft, DashboardSquare01Icon } from "@hugeicons/core-free-icons"
+import { Button } from "@/components/ui/button"
 
 // 0 = root, 1 = categories, 2 = filters, 3 = subFilters
 type Step = 0 | 1 | 2 | 3
@@ -51,15 +52,14 @@ export default function MobileMenu() {
     return (
         <Sheet onOpenChange={handleOpenChange} >
             <SheetTrigger render={
-                <div className="flex flex-col items-center gap-y-2 cursor-pointer">
+                <Button className="flex flex-col items-center gap-y-2 cursor-pointer bg-transparent hover:bg-transparent">
                     <HugeiconsIcon icon={DashboardSquare01Icon} className="size-5" />
                     دسته‌بندی‌ها
-                </div>
+                </Button>
             } />
             <SheetContent
                 showCloseButton={false}
                 side="right"
-                dir="rtl"
                 className="w-5/6 sm:max-w-sm gap-8 p-5 [&>button]:left-4 [&>button]:right-auto"
             >
                 <SheetTitle className="sr-only">منوی موبایل</SheetTitle>
