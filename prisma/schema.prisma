@@ -11,12 +11,22 @@ model User {
   id    String  @id @default(uuid())
   email String
   name  String?
+
+  reviews   Review[]
+  questions Question[]
+  answers   Answer[]
 }
 
 model Category {
-  id       String    @id @default(uuid())
-  name     String
-  products Product[]
+  id   String @id @default(uuid())
+  name String
+  slug String @unique
+
+  products   Product[]
+  attributes CategoryAttribute[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Product {
@@ -26,8 +36,104 @@ model Product {
   price    Int    @default(0)
   discount Int?   @default(0)
 
-  catrgory Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   categoryId String
 
+  reviews           Review[]
+  questions         Question[]
+  productAttributes ProductAttribute[]
+
   createdAt DateTime @default(now())
+}
+
+model Review {
+  id      String  @id @default(uuid())
+  rating  Int // 1 تا 5
+  comment String? @db.Text
+
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([productId])
+  @@index([userId])
+}
+
+model Question {
+  id       String @id @default(uuid())
+  question String @db.Text
+
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  answers Answer[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([productId])
+  @@index([userId])
+}
+
+model Answer {
+  id     String @id @default(uuid())
+  answer String @db.Text
+
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  questionId String
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([questionId])
+  @@index([userId])
+}
+
+model Attribute {
+  id   String @id @default(uuid())
+  name String
+  slug String @unique
+
+  categories CategoryAttribute[]
+  values     ProductAttribute[]
+
+  createdAt DateTime @default(now())
+}
+
+model CategoryAttribute {
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId String   @db.VarChar(100)
+
+  attribute   Attribute @relation(fields: [attributeId], references: [id], onDelete: Cascade)
+  attributeId String    @db.VarChar(100)
+
+  required Boolean @default(false)
+
+  @@id([categoryId, attributeId])
+}
+
+model ProductAttribute {
+  id String @id @default(uuid())
+
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String  @db.VarChar(100)
+
+  attribute   Attribute @relation(fields: [attributeId], references: [id], onDelete: Cascade)
+  attributeId String    @db.VarChar(100)
+
+  value String @db.Text
+
+  @@unique([productId, attributeId])
+  @@index([attributeId])
 }

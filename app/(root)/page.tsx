@@ -1,6 +1,5 @@
 import Image from "next/image";
 import CategoryWithImage from "./_components/CategoryWithImage";
-import Menu from "./_components/Menu";
 import Sliders from "./_components/Sliders";
 import SpecialSale from "./_components/SpecialSale";
 import WatchProducts from "./_components/WatchProducts";
@@ -9,7 +8,6 @@ import AirpodProducts from "./_components/AirpodProducts";
 export default function Home() {
   return (
     <div className="space-y-4">
-      <Menu />
       <Sliders />
       <div className="space-y-10">
         <CategoryWithImage />

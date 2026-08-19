@@ -1,0 +1,553 @@
+{
+    // =========================
+    // Common
+    // =========================
+    {
+      name: "برند",
+      slug: "brand",
+    },
+    {
+      name: "مدل",
+      slug: "model",
+    },
+    {
+      name: "رنگ",
+      slug: "color",
+    },
+    {
+      name: "وزن",
+      slug: "weight",
+    },
+    {
+      name: "ابعاد",
+      slug: "dimensions",
+    },
+    {
+      name: "جنس بدنه",
+      slug: "material",
+    },
+    {
+      name: "تاریخ معرفی",
+      slug: "release-date",
+    },
+    {
+      name: "سیستم عامل",
+      slug: "operating-system",
+    },
+    {
+      name: "نسخه سیستم عامل",
+      slug: "os-version",
+    },
+    {
+      name: "حافظه RAM",
+      slug: "ram",
+    },
+    {
+      name: "حافظه داخلی",
+      slug: "storage",
+    },
+    {
+      name: "ظرفیت باتری",
+      slug: "battery-capacity",
+    },
+    {
+      name: "عمر باتری",
+      slug: "battery-life",
+    },
+    {
+      name: "نوع شارژ",
+      slug: "charging-type",
+    },
+    {
+      name: "شارژ سریع",
+      slug: "fast-charging",
+    },
+    {
+      name: "شارژ بی‌سیم",
+      slug: "wireless-charging",
+    },
+    {
+      name: "مقاومت در برابر آب",
+      slug: "water-resistance",
+    },
+    {
+      name: "مقاومت در برابر گردوغبار",
+      slug: "dust-resistance",
+    },
+    {
+      name: "استاندارد IP",
+      slug: "ip-rating",
+    },
+    {
+      name: "بلوتوث",
+      slug: "bluetooth",
+    },
+    {
+      name: "نسخه بلوتوث",
+      slug: "bluetooth-version",
+    },
+    {
+      name: "Wi-Fi",
+      slug: "wifi",
+    },
+    {
+      name: "نسخه Wi-Fi",
+      slug: "wifi-version",
+    },
+    {
+      name: "NFC",
+      slug: "nfc",
+    },
+    {
+      name: "GPS",
+      slug: "gps",
+    },
+    {
+      name: "درگاه USB",
+      slug: "usb-port",
+    },
+    {
+      name: "نسخه USB",
+      slug: "usb-version",
+    },
+    {
+      name: "میکروفون",
+      slug: "microphone",
+    },
+    {
+      name: "اسپیکر",
+      slug: "speaker",
+    },
+    {
+      name: "دوربین",
+      slug: "camera",
+    },
+    {
+      name: "رزولوشن",
+      slug: "resolution",
+    },
+    {
+      name: "نرخ نوسازی",
+      slug: "refresh-rate",
+    },
+    {
+      name: "اندازه صفحه‌نمایش",
+      slug: "display-size",
+    },
+    {
+      name: "نوع صفحه‌نمایش",
+      slug: "display-type",
+    },
+
+    // =========================
+    // Mobile
+    // =========================
+    {
+      name: "محافظ صفحه‌نمایش",
+      slug: "screen-protection",
+    },
+    {
+      name: "تراکم پیکسلی",
+      slug: "pixel-density",
+    },
+    {
+      name: "صفحه‌نمایش لمسی",
+      slug: "touch-screen",
+    },
+    {
+      name: "پشتیبانی از HDR",
+      slug: "hdr",
+    },
+    {
+      name: "میزان روشنایی",
+      slug: "brightness",
+    },
+    {
+      name: "پردازنده",
+      slug: "cpu",
+    },
+    {
+      name: "تعداد هسته پردازنده",
+      slug: "cpu-cores",
+    },
+    {
+      name: "فرکانس پردازنده",
+      slug: "cpu-frequency",
+    },
+    {
+      name: "پردازنده گرافیکی",
+      slug: "gpu",
+    },
+    {
+      name: "پشتیبانی از کارت حافظه",
+      slug: "memory-card",
+    },
+    {
+      name: "حداکثر ظرفیت کارت حافظه",
+      slug: "memory-card-max",
+    },
+    {
+      name: "دوربین اصلی",
+      slug: "main-camera",
+    },
+    {
+      name: "تعداد دوربین اصلی",
+      slug: "main-camera-count",
+    },
+    {
+      name: "رزولوشن دوربین اصلی",
+      slug: "main-camera-resolution",
+    },
+    {
+      name: "دوربین فوق عریض",
+      slug: "ultrawide-camera",
+    },
+    {
+      name: "دوربین تله‌فوتو",
+      slug: "telephoto-camera",
+    },
+    {
+      name: "دوربین ماکرو",
+      slug: "macro-camera",
+    },
+    {
+      name: "لرزشگیر اپتیکال",
+      slug: "ois",
+    },
+    {
+      name: "رزولوشن فیلم‌برداری",
+      slug: "video-resolution",
+    },
+    {
+      name: "دوربین سلفی",
+      slug: "front-camera",
+    },
+    {
+      name: "رزولوشن دوربین سلفی",
+      slug: "front-camera-resolution",
+    },
+    {
+      name: "نوع سیم‌کارت",
+      slug: "sim-card",
+    },
+    {
+      name: "تعداد سیم‌کارت",
+      slug: "sim-count",
+    },
+    {
+      name: "شبکه ارتباطی",
+      slug: "network",
+    },
+    {
+      name: "پشتیبانی از 4G",
+      slug: "4g",
+    },
+    {
+      name: "پشتیبانی از 5G",
+      slug: "5g",
+    },
+    {
+      name: "نسخه USB",
+      slug: "usb-version",
+    },
+    {
+      name: "شارژ معکوس",
+      slug: "reverse-charging",
+    },
+
+    // =========================
+    // Laptop
+    // =========================
+    {
+      name: "سری پردازنده",
+      slug: "cpu-series",
+    },
+    {
+      name: "نسل پردازنده",
+      slug: "cpu-generation",
+    },
+    {
+      name: "تعداد رشته پردازنده",
+      slug: "cpu-threads",
+    },
+    {
+      name: "حافظه Cache پردازنده",
+      slug: "cpu-cache",
+    },
+    {
+      name: "حافظه کارت گرافیک",
+      slug: "gpu-memory",
+    },
+    {
+      name: "گرافیک مجتمع",
+      slug: "integrated-gpu",
+    },
+    {
+      name: "گرافیک مجزا",
+      slug: "dedicated-gpu",
+    },
+    {
+      name: "نوع RAM",
+      slug: "ram-type",
+    },
+    {
+      name: "تعداد اسلات RAM",
+      slug: "ram-slots",
+    },
+    {
+      name: "حداکثر RAM قابل پشتیبانی",
+      slug: "max-ram",
+    },
+    {
+      name: "نوع حافظه",
+      slug: "storage-type",
+    },
+    {
+      name: "رابط حافظه",
+      slug: "storage-interface",
+    },
+    {
+      name: "تعداد اسلات حافظه",
+      slug: "storage-slots",
+    },
+    {
+      name: "نسبت تصویر",
+      slug: "aspect-ratio",
+    },
+    {
+      name: "نوع باتری",
+      slug: "battery-type",
+    },
+    {
+      name: "نوع صفحه‌کلید",
+      slug: "keyboard-type",
+    },
+    {
+      name: "نور پس‌زمینه صفحه‌کلید",
+      slug: "keyboard-backlight",
+    },
+    {
+      name: "وب‌کم",
+      slug: "webcam",
+    },
+    {
+      name: "رزولوشن وب‌کم",
+      slug: "webcam-resolution",
+    },
+    {
+      name: "حسگر اثر انگشت",
+      slug: "fingerprint",
+    },
+    {
+      name: "USB Type-C",
+      slug: "usb-c",
+    },
+    {
+      name: "Thunderbolt",
+      slug: "thunderbolt",
+    },
+    {
+      name: "HDMI",
+      slug: "hdmi",
+    },
+    {
+      name: "Ethernet",
+      slug: "ethernet",
+    },
+    {
+      name: "جک 3.5 میلی‌متری",
+      slug: "audio-jack",
+    },
+
+    // =========================
+    // Tablet
+    // =========================
+    {
+      name: "پشتیبانی از کارت حافظه",
+      slug: "memory-card",
+    },
+    {
+      name: "حداکثر ظرفیت کارت حافظه",
+      slug: "memory-card-max",
+    },
+    {
+      name: "پشتیبانی از قلم",
+      slug: "stylus-support",
+    },
+    {
+      name: "پشتیبانی از کیبورد",
+      slug: "keyboard-support",
+    },
+
+    // =========================
+    // Smartwatch
+    // =========================
+    {
+      name: "جنس قاب",
+      slug: "case-material",
+    },
+    {
+      name: "جنس بند",
+      slug: "strap-material",
+    },
+    {
+      name: "نمایشگر همیشه روشن",
+      slug: "always-on-display",
+    },
+    {
+      name: "سنسور ضربان قلب",
+      slug: "heart-rate-sensor",
+    },
+    {
+      name: "سنسور اکسیژن خون",
+      slug: "spo2-sensor",
+    },
+    {
+      name: "سنسور دما",
+      slug: "temperature-sensor",
+    },
+    {
+      name: "شتاب‌سنج",
+      slug: "accelerometer",
+    },
+    {
+      name: "ژیروسکوپ",
+      slug: "gyroscope",
+    },
+    {
+      name: "قطب‌نما",
+      slug: "compass",
+    },
+    {
+      name: "فشارسنج",
+      slug: "barometer",
+    },
+    {
+      name: "ارتفاع‌سنج",
+      slug: "altimeter",
+    },
+    {
+      name: "تشخیص سقوط",
+      slug: "fall-detection",
+    },
+    {
+      name: "ارتباط سلولار",
+      slug: "cellular",
+    },
+    {
+      name: "eSIM",
+      slug: "esim",
+    },
+    {
+      name: "پشتیبانی از تماس",
+      slug: "call-support",
+    },
+    {
+      name: "کنترل موسیقی",
+      slug: "music-control",
+    },
+    {
+      name: "نمایش اعلان‌ها",
+      slug: "notifications",
+    },
+    {
+      name: "پایش خواب",
+      slug: "sleep-tracking",
+    },
+    {
+      name: "شمارش قدم",
+      slug: "step-counter",
+    },
+    {
+      name: "پایش فعالیت ورزشی",
+      slug: "workout-tracking",
+    },
+    {
+      name: "سیستم عامل سازگار",
+      slug: "compatible-os",
+    },
+
+    // =========================
+    // Earbuds / Headphones
+    // =========================
+    {
+      name: "نوع هدفون",
+      slug: "headphone-type",
+    },
+    {
+      name: "نوع قرارگیری روی گوش",
+      slug: "wearing-style",
+    },
+    {
+      name: "نوع اتصال",
+      slug: "connection-type",
+    },
+    {
+      name: "قطر درایور",
+      slug: "driver-size",
+    },
+    {
+      name: "نوع درایور",
+      slug: "driver-type",
+    },
+    {
+      name: "پاسخ فرکانسی",
+      slug: "frequency-response",
+    },
+    {
+      name: "امپدانس",
+      slug: "impedance",
+    },
+    {
+      name: "حساسیت",
+      slug: "sensitivity",
+    },
+    {
+      name: "کدک صوتی",
+      slug: "audio-codec",
+    },
+    {
+      name: "صدای فضایی",
+      slug: "spatial-audio",
+    },
+    {
+      name: "صدای Hi-Res",
+      slug: "hi-res-audio",
+    },
+    {
+      name: "برد بی‌سیم",
+      slug: "wireless-range",
+    },
+    {
+      name: "اتصال همزمان به چند دستگاه",
+      slug: "multipoint",
+    },
+    {
+      name: "حذف نویز فعال",
+      slug: "active-noise-cancellation",
+    },
+    {
+      name: "حالت شفافیت",
+      slug: "transparency-mode",
+    },
+    {
+      name: "تعداد میکروفون",
+      slug: "microphone-count",
+    },
+    {
+      name: "حذف نویز هنگام مکالمه",
+      slug: "call-noise-cancellation",
+    },
+    {
+      name: "کنترل لمسی",
+      slug: "touch-control",
+    },
+    {
+      name: "دستیار صوتی",
+      slug: "voice-assistant",
+    },
+    {
+      name: "مدت زمان شارژ",
+      slug: "charging-time",
+    },
+}

@@ -7,8 +7,8 @@ export const productAction = async () => {
 
     const watchProducts = await prisma.product.findMany({
         where: {
-            catrgory: {
-                name: 'watch'
+            category: {
+                slug: 'smart-watch'
             }
         }
     })
